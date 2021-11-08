@@ -1,5 +1,21 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1 My Form
+  form(action="/results" method="post")
+    label(for="firstName") First Name:
+    input(type="text" name="firstName" id="firstName")
+    br
+    label(for="lastName") Last Name:
+    input(type="text" name="lastName" id="lastName")
+    br
+    label(for="dateOfBirth") Date of Birth:
+    input(type="data" name="dateOfBirth" id="dateOfBirth")
+    br
+    label(for="favoriteSport") Favorite Sport:
+    input(type="text" name="favoriteSport" id="favoriteSport")
+    br
+    label(for="pizza") I like pizza
+    input(type="checkbox" name="pizza" id="pizza" value="pizza")
+    br
+    button(type="submit") Submit form
